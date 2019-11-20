@@ -160,6 +160,13 @@
                     confirmButtonText: '确定',
                     cancelButtonText: '取消'
                 }).then(({value}) => {
+                    if(value.split(" ").join("").length === 0) {
+                        this.$message({
+                            type: 'warning',
+                            message: '文件名不能为空！'
+                        })
+                        return
+                    }
                     this.$api.httpPost('/ptyt/customs/kits/createFolder', {
                         folderPath: this.currentPath + '/' + value
                     }).then(res => {
@@ -231,7 +238,7 @@
         margin: 0px 0px 10px 0px;
         border-left: 5px solid #669900;
         font-size: 15px;
-        /*color: #ffffff;*/
+        color: #606266;
         background: #f2f2f2;
     }
 

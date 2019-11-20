@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Copyright © strongyang</p>
+    <p>Copyright © StrongYang</p>
   </div>
 </template>
 

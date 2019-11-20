@@ -23,6 +23,7 @@
                 <li>
                     <el-dropdown @command="handleCommand">
                   <span class="el-dropdown-link">
+                      <i class="el-icon-s-custom"></i>
                     {{userName}}<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
                         <el-dropdown-menu slot="dropdown">
@@ -193,5 +194,9 @@
 
     .hamburger.is-active {
         transform: rotate(0deg);
+    }
+
+    .item {
+        color: #606266;
     }
 </style>
